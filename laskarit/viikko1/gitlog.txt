@@ -1,0 +1,46 @@
+
+Yritin kaikki mahdolliset copy paste toiminnot mukaan lukien ctrl+shift+c ctrl+shift+v mutta copy paste ei onnistu. 
+Ohessa otteita logista:
+
+commit d3d6ccb...
+Author: Maarit Vilen
+Date: Sun
+
+poisto ja nimenmuutos
+
+tiedostoja/file2.txt | 0
+tiedostoja/{file1.txt=>file22.txt}|0
+2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0c559cf...
+Author: Maarit Vilen
+Date: Sun 
+
+lisää tiedostoja
+
+tiedostoja/file1.txt |0
+tiedostoja/file2.txt |0
+tiedostoja/file3.txt |0
+3 files changed, 0 insertions (+), 0 deletions(-)
+
+commit efca7df9195...
+Author:Maarit Vilen
+Date sun
+
+uutta tekstiä
+
+eka.txt |2+-
+kolmas.txt|+-
+2 files changed, 2 insertions(+), 2 deletions(-)
+.
+.
+.
+commit 1564fcd33b13b311b7313afb53288376db490bd2
+Author: Maarit
+Date: Sun
+
+tiedostot.txt luotu
+
+tiedostot.txt |0
+1 file changed, 0 insertions (+), 0 deletions(-)
+
