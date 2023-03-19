@@ -6,3 +6,5 @@ gitlog löytyy täältä [gitlog](https://github.com/MaaritVilen/ot-harjoitustyo
 komentorivi löytyy täältä [komentorivi](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 **Paikallisella koneella** *tehty muutos*
+
+Epäsynkronointi
