@@ -1,3 +1,83 @@
+commit d3d6ccb4c847b408b1c6846053bff5466cc9fcd4
+Author: Maarit Vilen <maarit.vilen@pp.inet.fi>
+Date:   Sun Mar 19 13:53:25 2023 +0200
+
+    poisto ja nimenmuutos
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0c559cf4f7ae4a3c14d13ecd77e6d1adcae3dd91
+Author: Maarit Vilen <maarit.vilen@pp.inet.fi>
+Date:   Sun Mar 19 13:42:20 2023 +0200
+
+    lisää tiedostoja
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit efca7df9195dd8e2025c0b2e797e012744869fc8
+Author: Maarit Vilen <maarit.vilen@pp.inet.fi>
+Date:   Sun Mar 19 10:45:14 2023 +0200
+
+    uutta tekstiä
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 8c4d148d62138f4ee732037839d953d34e0f2917
+Author: Maarit Vilen <maarit.vilen@pp.inet.fi>
+Date:   Sun Mar 19 10:42:28 2023 +0200
+
+    uusi nimi
+
+ tiedostot.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5887b662ecea5df1dd0b0c407687e8c2b410ecd8
+Author: Maarit Vilen <maarit.vilen@pp.inet.fi>
+Date:   Sun Mar 19 10:36:01 2023 +0200
+
+    muutos ja lisäys
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a27330e3894699903a5ca66dc6f2c926b15a8c2c
+Author: Maarit Vilen <maarit.vilen@pp.inet.fi>
+Date:   Sun Mar 19 08:58:24 2023 +0200
+
+    muutos ja lisäys
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 0377973141af0dc5c4ab8d28733861d89eb30981
+Author: Maarit Vilen <maarit@LAPTOP-6ROMLIFE>
+Date:   Sat Mar 18 19:18:10 2023 +0200
+
+    muutos ja lisäys
+
+ tiedostot.txt | 1 +
+ toinen.txt    | 0
+ 2 files changed, 1 insertion(+)
+
+commit 1564fcd33b13b311b7313afb53288376db490bd2
+Author: Maarit Vilen <maarit@LAPTOP-6ROMLIFE>
+Date:   Sat Mar 18 18:58:06 2023 +0200
+
+    tiedostot.txt luotu
+
+ tiedostot.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+m
+
+Edellinen teksti on luotu graafisessa liittymässä. Seuraava komentokehoitteenkautta
 
 Yritin kaikki mahdolliset copy paste toiminnot mukaan lukien ctrl+shift+c ctrl+shift+v mutta copy paste ei onnistu. 
 Ohessa otteita logista:
