@@ -19,6 +19,7 @@
 *Peli päättyy kun palikkapino yltää ruudun yläkulmaan.
 
 **Näkymät**
+
 *Aloitus-Nimi, jonka jälkeen näytetään aikaisemmat pisteet/tasot
 
 *Peli näkymä
