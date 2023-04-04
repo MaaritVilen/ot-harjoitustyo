@@ -1,3 +1,5 @@
+Changelog löytyy täältä [Changelog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
 Vaatimusmäärittely löytyy täältä [vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 Tuntikirjanpito löytyy täältä [tuntikirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
