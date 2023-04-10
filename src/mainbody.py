@@ -165,8 +165,5 @@ class MainBody():
                             
             #clock.tick(60)      
 
-gaim=MainBody()
-gaim.main()
-#create=GaimSettings()
-#create.save_result("jaakko",14)
-#print(create.previous_results("jaakko"))
+new_game=MainBody()
+new_game.main()
