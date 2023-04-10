@@ -1,5 +1,5 @@
 import unittest
-from mainbody import GaimSettings
+from program.gaimsettings import GaimSettings
 
 #Testataan että hakee tuloksen oikein
 class TestGaimSettings(unittest.TestCase):
