@@ -1,16 +1,36 @@
-Changelog löytyy täältä [Changelog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+#Tetris
 
-Vaatimusmäärittely löytyy täältä [vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+Kyseessä on klassinen tetris, jossa pelaaja yrittää saada pelin etenemään niin pitkälle kuin mahdollista.
+Peliruudun yläreunasta putoilee palikoita kiihtyvällä tahdilla, jotka alaosaan pudotessaan pysähtyvät ja kasaantuvat
+pinoksi. Kun pino yltää ruudun yläreunaan, peli päättyy. Pinoa saa madallettua asettelamalla putoavia palikoita siten
+ettei riville jää tyhjää tilaa. Kun rivi on täynnä ilman tyhjiä ruutuja, rivi poistuu ja pino madaltuu rivin verran.
 
-Tuntikirjanpito löytyy täältä [tuntikirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+##Dokumentaatio
+-[Changelog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-**Hyperlinkki** (CTRL+B ei toimi koneellani)
+_[Vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-*En jostais syystä onnistu käyttämään viitattuja toimintoja.* (CTRL+I ei myöskään toimi). 
+_[Työaikakirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-gitlog löytyy täältä [gitlog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-komentorivi löytyy täältä [komentorivi](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+##Asennus
+1. Käynnistä sovellus komennolla:
+`poetry run invoke start`
 
-**Paikallisella koneella** *tehty muutos*
+##Komentorivitoiminnot
+###Ohjelman suorittaminen
+Ohjelman pystyy suorittamaan komennolla:
+`poetry run invoke start`
 
-Epäsynkronointi
+###Testaus
+Testit suoritetaan komennolla:
+`poetry run invoke test`
+
+###Testikattavuus
+Testikattavuusraportin voi generoida komennolla:
+`poetry run invoke coverage-report`
+
+###Pylint
+Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
+`poetry run invoke lint`
+
+
