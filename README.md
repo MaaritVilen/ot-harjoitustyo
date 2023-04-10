@@ -1,35 +1,40 @@
-#Tetris
+# A Tetris
 
 Kyseessä on klassinen tetris, jossa pelaaja yrittää saada pelin etenemään niin pitkälle kuin mahdollista.
 Peliruudun yläreunasta putoilee palikoita kiihtyvällä tahdilla, jotka alaosaan pudotessaan pysähtyvät ja kasaantuvat
 pinoksi. Kun pino yltää ruudun yläreunaan, peli päättyy. Pinoa saa madallettua asettelamalla putoavia palikoita siten
 ettei riville jää tyhjää tilaa. Kun rivi on täynnä ilman tyhjiä ruutuja, rivi poistuu ja pino madaltuu rivin verran.
 
-##Dokumentaatio
+## A Dokumentaatio
 -[Changelog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
 _[Vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 _[Työaikakirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-##Asennus
+## A Asennus
+
 1. Käynnistä sovellus komennolla:
 `poetry run invoke start`
 
-##Komentorivitoiminnot
-###Ohjelman suorittaminen
+## A Komentorivitoiminnot
+### A Ohjelman suorittaminen
+
 Ohjelman pystyy suorittamaan komennolla:
 `poetry run invoke start`
 
-###Testaus
+### A Testaus
+
 Testit suoritetaan komennolla:
 `poetry run invoke test`
 
-###Testikattavuus
+### A Testikattavuus
+
 Testikattavuusraportin voi generoida komennolla:
 `poetry run invoke coverage-report`
 
-###Pylint
+### A Pylint
+
 Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
 `poetry run invoke lint`
 
