@@ -16,7 +16,7 @@ class Shapes:
 
 #gaim settings like speed of the game are defined here
 class GaimSettings():
-    def __init__():
+    def __init__(self):
         pass
 
     def create_game():
@@ -33,10 +33,40 @@ class GaimSettings():
         pass
 
     def save_result(self, name, result):
-        pass
-
-    def previous_results(self, name):
-        pass
+        new_name="yes"
+        new_result="no"
+        with open("results.csv") as results:
+            new_list=[]
+            for line in results:
+                sub_list=[]
+                line=line.replace("\n","")
+                parts=line.split(";")
+                for part in parts:
+                    sub_list.append(part)
+                if sub_list[0]==name:
+                    new_name="no"
+                    if int(sub_list[1])<result:
+                        new_result="yes"
+                        sub_list[1]=result
+                new_list.append(sub_list)
+        
+        if new_name=="yes":
+            with open("results.csv","a") as updated_results:
+                updated_results.write(f"{name};{result}\n")
+        elif new_result=="yes":
+            with open("results.csv", "w") as updated_results:
+                for line in new_list:
+                    updated_results.write(f"{line[0]};{line[1]}\n")
+        
+    def previous_results(self,name):
+        result=0
+        with open("results.csv") as results:
+            for line in results:
+                line=line.replace("\n","")
+                parts=line.split(";")
+                if parts[0]==name:
+                    result=parts[1]
+        return result
 
 #The game is run in this function
 class MainBody():
@@ -55,6 +85,7 @@ class MainBody():
         fontti = pygame.font.SysFont("Arial", 24)
         
         def draw_screen(self):
+            gaimsettings=GaimSettings()
             screen.fill((0,0,0))
             if self.gamestatus==0:
                 teksti = fontti.render("Please insert your name and then hit enter.", True, (255, 255, 255))
@@ -62,7 +93,7 @@ class MainBody():
                 teksti_2 = fontti.render(string, True, (255, 0, 0))
                 screen.blit(teksti_2, (100,100))
             if self.gamestatus==1:
-                text_3=fontti.render(f"Hello {string} your all time high scores are X", True, (0,255,0))
+                text_3=fontti.render(f"Hello {string} your all time high scores are {gaimsettings.previous_results(string)}", True, (0,255,0))
                 screen.blit(text_3, (100,150))
             pygame.display.flip()
         
@@ -123,7 +154,6 @@ class MainBody():
                         elif event.key==pygame.K_z:
                             string+="z"    
                         elif event.key==pygame.K_RETURN:
-                            #gaimsettings.previous_results(string)
                             self.gamestatus=1
 
             if event.type == pygame.QUIT:
@@ -137,3 +167,6 @@ class MainBody():
 
 gaim=MainBody()
 gaim.main()
+#create=GaimSettings()
+#create.save_result("jaakko",14)
+#print(create.previous_results("jaakko"))
