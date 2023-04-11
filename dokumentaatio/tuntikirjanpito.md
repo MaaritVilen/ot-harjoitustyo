@@ -10,5 +10,7 @@
 | 08.4.2023  | 2,0    | Datan käsittely        |
 | 09.4.2023  | 4,0    | Datan käsittely        |
 | 10.4.2023  | 6,0    | Testejä ja Invoke      |
-|            | 27,0   | Yhteensä               |
+| 11.4.2023  | 1,0    | Dokumentaatiota        |
+| 11.4.2023  | 1,0    | Yritys korjata csv-haku|
+|            | 29,0   | Yhteensä               |
 
