@@ -12,3 +12,7 @@ Ongelma ratkaistavaksi.
 - Pelin testiympäristöä on kehitetty edelleen. Jäi viime viikolla kesken...
 - Pylint asennettu, jostain syystä ei kuitenkaan toimi. Saattanee olla sama ongelma kuin pelin käynnistämisessä 
 komentorivin kautta.
+
+## Seuraavat parannukset tulee laatia jo tehtyihin funktioihin
+- Nimeä syötettäessä käyttäjän tulee kyetä myös poistamaan ja korjaamaan tekstiä
+- Aloitusruudun visuaalisuutta tulee kehittää
