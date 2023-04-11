@@ -1,3 +1,7 @@
+# Kysymys ohjaajalle
+
+Onko ohjaajalla mitään näkemysät miksi ohjelma löytää csv-tiedoston kun ohjelmaa käytetään vcs:n kautta mutta löydä kun yritän ajaa ohjelmaa tai testejä komentoriivn kautta?
+
 # Tetris
 
 Kyseessä on klassinen tetris, jossa pelaaja yrittää saada pelin etenemään niin pitkälle kuin mahdollista.
