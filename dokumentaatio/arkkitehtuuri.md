@@ -7,7 +7,7 @@
 classDiagram
 	MainBody -->GaimSettings
 	MainBody -->Shapes
-	Mainbody -->Counting
+	MainBody -->Counting
 	class MainBody
 	class GaimSettings
 	class Shapes
