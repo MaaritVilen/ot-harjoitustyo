@@ -1,4 +1,5 @@
 ```mermaid
+
 classDiagram
 	class MainBody
 
@@ -14,3 +15,4 @@ class Diagram
 GaimSetting <|-- Mainbody
 Shapes <|-- Mainbody
 Counting <|-- Mainbody
+```
