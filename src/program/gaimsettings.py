@@ -1,4 +1,4 @@
-
+#gaim settings like speed of the game are defined here
 class GaimSettings():
     def __init__(self):
         pass
@@ -52,4 +52,5 @@ class GaimSettings():
                     result=parts[1]
         return result
 
-
+testi=GaimSettings()
+print(testi.previous_results("maarit"))
