@@ -1,26 +1,26 @@
-**TETRIS**
+# TETRIS
 
-**Sovelluksen tarkoitus**
+## Sovelluksen tarkoitus
 
 *Sovellus on klassinen tetris-peli, eli ruudulle putoavat palikat pyritään sjoittaamaan siten että ruutu ei täyty. 
 
 *Mikäli ruutu täyttyy palikoista, peli päättyy.
 
-**Suunnittellut toiminnallisuudet:**
+## Suunnittellut toiminnallisuudet:
 
-*Pelaaja kirjaa alussa nimensä
+*Pelaaja kirjaa alussa nimensä -TEHTY
 
 *Peli laskee pisteitä
 
-*Pelistä löytyy saman pelaajan aikaisemmat pisteet.
+*Pelistä löytyy saman pelaajan aikaisemmat pisteet. -TEHTY
 
 *Peli vaikeutuu (palikoita putaa tiheämmin) pisteiden kertyessä
 
 *Peli päättyy kun palikkapino yltää ruudun yläkulmaan.
 
-**Näkymät**
+## Näkymät
 
-*Aloitus-Nimi, jonka jälkeen näytetään aikaisemmat pisteet/tasot
+*Aloitus-Nimi, jonka jälkeen näytetään aikaisemmat pisteet/tasot -TEHTY
 
 *Peli näkymä
 
