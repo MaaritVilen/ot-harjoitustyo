@@ -12,6 +12,8 @@ _[Vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/mast
 
 _[Työaikakirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+-[Arkkitehtuuri](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Asennus
 
 1. Käynnistä sovellus komennolla:
