@@ -52,5 +52,4 @@ class GaimSettings():
                     result=parts[1]
         return result
 
-testi=GaimSettings()
-print(testi.previous_results("maarit"))
+

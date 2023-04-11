@@ -1,4 +1,5 @@
 import unittest
+import program.results.csv
 from program.gaimsettings import GaimSettings
 
 #Testataan että hakee tuloksen oikein

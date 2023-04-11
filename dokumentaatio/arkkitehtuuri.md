@@ -5,9 +5,9 @@
 ```mermaid
 
 classDiagram
-	MainBody -->GaimSettings
-	MainBody -->Shapes
-	MainBody -->Counting
+	MainBody ..>GaimSettings
+	MainBody ..>Shapes
+	MainBody ..>Counting
 	class MainBody
 	class GaimSettings
 	class Shapes
@@ -28,3 +28,7 @@ pysyväistallennus sillä tallennettava informaatio on varsin pieni, jolloin oma
 
 Peliin liittyy erilaista laskentaa kuten palikoiden sijainti ja liikkeet, rivien poistaminen, pisteiden kertyminen
 ja pelin päättyminen. Voi olla että kehityksen edetessä tätä osiota tulee vielä jakaa osiin.
+
+## Shapes
+
+Palikat arvotaan ja muodostetaan täällä.
