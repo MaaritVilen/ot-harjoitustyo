@@ -1,6 +1,6 @@
 # Kysymys ohjaajalle
 
-Onko ohjaajalla mitään näkemysät miksi ohjelma löytää csv-tiedoston kun ohjelmaa käytetään vcs:n kautta mutta löydä kun yritän ajaa ohjelmaa tai testejä komentoriivn kautta?
+Onko ohjaajalla mitään näkemystä miksi ohjelma löytää csv-tiedoston kun ohjelmaa käytetään VCS:n kautta mutta ei löydä kun yritän ajaa ohjelmaa tai testejä komentoriivn kautta?
 
 # Tetris
 
