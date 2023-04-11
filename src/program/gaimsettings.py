@@ -52,4 +52,4 @@ class GaimSettings():
                     result=parts[1]
         return result
 
-#The game is run in this function
+

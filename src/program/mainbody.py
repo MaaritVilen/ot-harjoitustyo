@@ -1,6 +1,7 @@
 #Pelirungon koodia pitää vielä jäsennellä paremmin. Tarkoitus oli ensin saada looppi toimimaan...
 
 import pygame
+from gaimsettings import GaimSettings
 #from sprites.box import Box
 
 #The shapes that are droping out from the sky are created in this class.
