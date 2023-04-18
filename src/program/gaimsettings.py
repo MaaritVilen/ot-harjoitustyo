@@ -3,12 +3,6 @@ class GaimSettings():
     def __init__(self):
         pass
 
-    def create_game():
-        pass
-
-    def ask_name():
-        pass
-
     def drop_speed_of_the_shape():
         pass
 
