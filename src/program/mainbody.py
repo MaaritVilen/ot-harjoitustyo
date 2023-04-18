@@ -11,7 +11,7 @@ class MainBody():
 
     def main(self):
         shape=Shapes()
-        count=Counting
+        count_move=Counting()
         shape.new_shape()
         shape.start_position()
         self.new_shape=False
@@ -19,8 +19,8 @@ class MainBody():
         self.h=shape.height
         self.x=shape.start
         self.y=0
-        self.move_right=0
-        self.move_left=0
+        move_right=0
+        move_left=0
         string=""
         pygame.init()
         screen = pygame.display.set_mode((500, 700))
@@ -110,21 +110,21 @@ class MainBody():
                             shape.new_shape()
                     elif self.gamestatus==2:
                         if event.key==pygame.K_RIGHT:
-                            self.move_right=5
+                            move_right=5
                         elif event.key==pygame.K_LEFT:
-                            self.move_left=-5
+                            move_left=-5
                 if event.type==pygame.KEYUP:
                     if self.gamestatus==2:
                         if event.key==pygame.K_RIGHT:
-                            self.move_right=0
+                            move_right=0
                         elif event.key==pygame.K_LEFT:
-                            self.move_left=0
+                            move_left=0
             
             
-            self.x=count.count_x(self.x, self.w, self.move_left, self.move_right)
+            self.x=count_move.count_x(self.x, self.w, move_left, move_right)
                        
             if self.gamestatus==2:
-                self.y=count.count_y(self.y, self.h)
+                self.y=count_move.count_y(self.y, self.h)
                
             if event.type == pygame.QUIT:
                 exit()

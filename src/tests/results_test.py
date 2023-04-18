@@ -22,27 +22,27 @@ class TestGaimSettings(unittest.TestCase):
         result=game.previous_results("olli")
         self.assertEqual(result,17)
     
-class TestCounting:
+class TestCounting(unittest.TestCase):
     def setUp(self):
         print("no need")
 
-    def test_move_left_is_right(self):
-        count=Counting()
-        x1=count.count_x(100, 50, 5, 0)
-        self.assertEqual(x1,105)
-        #x2=count.count_x(400, 100,5,0)
-        #self.assertEqual(x2,400)
-    
     def test_move_right_is_right(self):
-        count=Counting()
-        x3=count.count_x(100, 50, 0, -5)
+        count_move=Counting()
+        x1=count_move.count_x(100, 50, 0, 5)
+        self.assertEqual(x1,105)
+        x2=count_move.count_x(400, 100, 0, 5)
+        self.assertEqual(x2,400)
+    
+    def test_move_left_is_right(self):
+        count_move=Counting()
+        x3=count_move.count_x(100, 50, -5, 0)
         self.assertEqual(x3,95)
-        x4=count.count_x(0, 50, 0, -5)
+        x4=count_move.count_x(0, 50, -5, 0)
         self.assertEqual(x4,0)
     
     def test_move_down_is_right(self):
-        count=Counting()
-        y1=count.count_y(50,50)
+        count_move=Counting()
+        y1=count_move.count_y(50,50)
         self.assertEqual(y1, 51)
-        y2=count.count_y(600, 100)
+        y2=count_move.count_y(600, 100)
         self.assertEqual(y2,600)
