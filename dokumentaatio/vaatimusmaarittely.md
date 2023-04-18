@@ -20,8 +20,8 @@
 
 ## Näkymät
 
-*Aloitus-Nimi, jonka jälkeen näytetään aikaisemmat pisteet/tasot -TEHTY
+*Aloitus-Nimi, jonka jälkeen näytetään aikaisemmat pisteet/tasot - osittain TEHTY
 
-*Peli näkymä
+*Peli näkymä - Osittain tehty
 
 *Loppunäkymä, jossa näytetään pisteet ja kysytään halukkuutta aloittaa uusi peli

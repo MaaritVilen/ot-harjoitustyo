@@ -1,7 +1,7 @@
 class Counting():
 
     def __init__(self):
-           pass
+           self.dummy=[]
     
     def count_x(x, width, move_left, move_right):
         if 0<=x and x+width<=500:
