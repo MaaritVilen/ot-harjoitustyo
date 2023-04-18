@@ -12,5 +12,9 @@
 | 10.4.2023  | 6,0    | Testejä ja Invoke      |
 | 11.4.2023  | 1,0    | Dokumentaatiota        |
 | 11.4.2023  | 1,0    | Yritys korjata csv-haku|
-|            | 29,0   | Yhteensä               |
+| 14.4.2023  | 2,0    | Palikoiden koodausta   |
+| 16.4.2023  | 3,0    | Palikoiden koodausta   |
+| 17.4.2023  | 3,0    | Palikoiden liikkeet    |
+| 18.4.2023  | 3,0    | Testejä ja dokumentaatio|
+|            | 40,0   | Yhteensä               |
 
