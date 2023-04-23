@@ -17,8 +17,16 @@ komentorivin kautta.
 - Palikat ovat jatkuvassa liikkessä
 - Käyttäjä kykenee siirtämään palikoita oikealla ja vasemmalle
 - Palikka pysähtyy alareunaan
+## viikko 4 (kalenteriviikko 16-17)
+- Pelaaja kykenee kääntämään palikan
+- Palikan pysähdyttyä peli luon uuden putoavan palikan yläreunaan
+- Vanhat palikat jäävät näkyviin ruudulle
+- Palikka ei enää pysähdy alareunaan vaan se pysähtyy edellisen palikan päälle (vaati vielä pientä tarkkuuden lisäystä) 
+
 ## Seuraavat parannukset tulee laatia jo tehtyihin funktioihin
 - Nimeä syötettäessä käyttäjän tulee kyetä myös poistamaan ja korjaamaan tekstiä
 - Aloitusruudun visuaalisuutta tulee kehittää
-- Käyttäjän tulee kyetä kääntämään palikka
-- Käyttäjän tulee kyetä "pudottamaan" palikka
+- Tällä hetkellä palikka siirtyy sivusuunnassa pisteen kerrallaan. Muutetaan kymmeneen pisteeseen, helpottaa
+"pudottamista"
+- Tarksitetaan pysähtymiskohdan tarkkuus
+

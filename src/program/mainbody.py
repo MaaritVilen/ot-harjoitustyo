@@ -8,20 +8,19 @@ class MainBody():
     def __init__(self):
         self.gamestatus=0
         self.new_shape=True
-
+    
     def main(self):
         shape=Shapes()
-        count_move=Counting()
+        count=Counting()
         shape.new_shape()
         shape.start_position()
-        self.new_shape=False
-        self.w=shape.width
-        self.h=shape.height
         self.x=shape.start
         self.y=0
         move_right=0
         move_left=0
+        turn=False
         string=""
+        palikat=[]
         pygame.init()
         screen = pygame.display.set_mode((500, 700))
         
@@ -42,7 +41,9 @@ class MainBody():
                 screen.blit(text_3, (100,150))
                 screen.blit(text_4,(100,500))
             if self.gamestatus==2:
-                pygame.draw.rect(screen, (0, 255, 200), (self.x, self.y, self.w, self.h))
+                pygame.draw.rect(screen, (0, 255, 200), (self.x, self.y, shape.w, shape.h))
+                for i in range(len(palikat)):
+                    pygame.draw.rect(screen, (0, 255, 200), (palikat[i][0], palikat[i][1], palikat[i][2], palikat[i][3]))
 
             pygame.display.flip()
         
@@ -113,18 +114,50 @@ class MainBody():
                             move_right=5
                         elif event.key==pygame.K_LEFT:
                             move_left=-5
+                        elif event.key==pygame.K_UP:
+                            count.turn_shape(shape.h, shape.w)
+                            shape.h=count.new_height
+                            shape.w=count.new_width    
+                        elif event.key==pygame.K_DOWN:
+                            count.turn_shape(shape.h, shape.w)
+                            shape.h=count.new_height
+                            shape.w=count.new_width
+                        elif event.key==pygame.K_RETURN:
+                            count.count_old_shapes(self.x, shape.w, shape.h, palikat)
+                            self.y=count.final_y
+                            palikat.append([self.x, self.y, shape.w, shape.h])
+                            shape.new_shape()
+                            shape.start_position()
+                            self.x=shape.start
+                            self.y=0
+                            
                 if event.type==pygame.KEYUP:
                     if self.gamestatus==2:
                         if event.key==pygame.K_RIGHT:
                             move_right=0
                         elif event.key==pygame.K_LEFT:
                             move_left=0
+                        elif event.key==pygame.K_UP:
+                            pass
+                        elif event.key==pygame.K_DOWN:
+                            pass
+                        elif event.key==pygame.K_RETURN:
+                            pass
             
             
-            self.x=count_move.count_x(self.x, self.w, move_left, move_right)
+            self.x=count.count_x(self.x, shape.w, move_left, move_right)
                        
             if self.gamestatus==2:
-                self.y=count_move.count_y(self.y, self.h)
+                self.y=count.count_y(self.y, shape.h)
+         
+            if self.y+shape.h==700:
+                palikat.append([self.x, self.y, shape.w, shape.h])
+                shape.new_shape()
+                shape.start_position()
+                self.x=shape.start
+                shape.y=0
+            
+            
                
             if event.type == pygame.QUIT:
                 exit()

@@ -16,5 +16,8 @@
 | 16.4.2023  | 3,0    | Palikoiden koodausta   |
 | 17.4.2023  | 3,0    | Palikoiden liikkeet    |
 | 18.4.2023  | 3,0    | Testejä ja dokumentaatio|
-|            | 40,0   | Yhteensä               |
+| 19.4.2023  | 0,5    | Palikka kääntyy        |
+| 21.4.2023  | 2,0    | Palikka pysähtyy       |
+| 22.4.2023  | 2,0    | Palikka pysähtyy oikeaan kohtaan |
+|            | 44,5   | Yhteensä               |
 
