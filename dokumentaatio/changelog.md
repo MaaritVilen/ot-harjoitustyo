@@ -23,6 +23,10 @@ komentorivin kautta.
 - Vanhat palikat jäävät näkyviin ruudulle
 - Palikka ei enää pysähdy alareunaan vaan se pysähtyy edellisen palikan päälle (vaati vielä pientä tarkkuuden lisäystä) 
 
+## viikko 6 (kalenteriviikko 17-18)
+- Palikoiden sijoittumista pysähtymisen jälkeen parannettu.
+- Rivin poistamista suunniteltu (pahasti kesken)
+- Juhlittu Vappua...
 ## Seuraavat parannukset tulee laatia jo tehtyihin funktioihin
 - Nimeä syötettäessä käyttäjän tulee kyetä myös poistamaan ja korjaamaan tekstiä
 - Aloitusruudun visuaalisuutta tulee kehittää

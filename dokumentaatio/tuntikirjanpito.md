@@ -19,5 +19,8 @@
 | 19.4.2023  | 0,5    | Palikka kääntyy        |
 | 21.4.2023  | 2,0    | Palikka pysähtyy       |
 | 22.4.2023  | 2,0    | Palikka pysähtyy oikeaan kohtaan |
-|            | 44,5   | Yhteensä               |
+| 29.4.2023  | 3,0    | Palikoiden laskennan parantelua |
+| 30.4.2023  | 3,0    | Rivin poistamisen laskentaa |
+| 02.5.2023  | 2,0    | Dokumentaatiota ja virheiden korjausta |
+|            | 52,5   | Yhteensä               |
 

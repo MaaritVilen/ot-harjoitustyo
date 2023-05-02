@@ -11,11 +11,11 @@ class Shapes():
     def new_shape(self):
         shape=randint(1,3)
         if shape==1:
-            self.w=50
+            self.w=20
             self.h=100
         elif shape==2:
             self.w=100
-            self.h=50
+            self.h=20
         elif shape==3:
             self.w=100
             self.h=100
