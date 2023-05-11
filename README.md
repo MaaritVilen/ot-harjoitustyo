@@ -18,7 +18,7 @@ _[Työaikakirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master
 ## Asennus
 
 1. Käynnistä sovellus komennolla:
-`poetry run invoke start`
+`poetry instal`
 
 ## Komentorivitoiminnot
 ### Ohjelman suorittaminen
