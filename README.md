@@ -7,13 +7,14 @@ pinoksi. Kun pino yltää ruudun yläreunaan, peli päättyy. Pinoa saa madallet
 ettei riville jää tyhjää tilaa. Kun rivi on täynnä ilman tyhjiä ruutuja, rivi poistuu ja pino madaltuu rivin verran.
 
 ## Dokumentaatio
--[Changelog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+- [Käyttöohje](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+- [Changelog](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-_[Vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Vaatimusmäärittely](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-_[Työaikakirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+- [Työaikakirjanpito](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
--[Arkkitehtuuri](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+- [Arkkitehtuuri](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
