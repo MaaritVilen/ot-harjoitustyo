@@ -8,10 +8,12 @@ class MainBody():
     def __init__(self):
         self.gamestatus=0
         self.new_shape=True
+        self.event=""
     
     def main(self):
         shape=Shapes()
         count=Counting()
+        gaimsettings=GaimSettings()
         shape.new_shape()
         shape.start_position()
         self.x=shape.start
@@ -32,7 +34,7 @@ class MainBody():
             screen.fill((0,0,0))
             if self.gamestatus==0:
                 teksti = fontti.render("Please insert your name and then hit enter.", True, (255, 255, 255))
-                screen.blit(teksti, (100, 50))
+                screen.blit(teksti, (50, 50))
                 teksti_2 = fontti.render(string, True, (255, 0, 0))
                 screen.blit(teksti_2, (100,100))
             if self.gamestatus==1:
@@ -44,6 +46,8 @@ class MainBody():
                 pygame.draw.rect(screen, (0, 255, 200), (self.x, self.y, shape.w, shape.h))
                 for i in range(len(pieces)):
                     pygame.draw.rect(screen, (0, 255, 200), (pieces[i][0], pieces[i][1], pieces[i][2], pieces[i][3]))
+                text_5=fontti.render(f"Socers: {count.scores}", True, (0,255,200))
+                screen.blit(text_5, (400,30))
 
             pygame.display.flip()
         
@@ -125,7 +129,10 @@ class MainBody():
                         elif event.key==pygame.K_RETURN:
                             count.count_old_shapes(self.x, shape.w, shape.h, pieces)
                             self.y=count.final_y
+                            self.x=count.final_x
                             pieces.append([self.x, self.y, shape.w, shape.h])
+                            new_pieces=count.check_shapes(pieces)
+                            pieces=new_pieces
                             shape.new_shape()
                             shape.start_position()
                             self.x=shape.start
@@ -151,17 +158,21 @@ class MainBody():
                 self.y=count.count_y(self.y, shape.h)
                 count.count_old_shapes(self.x, shape.w, shape.h, pieces)
                 if self.y==count.final_y:
+                    self.x=count.final_x
                     pieces.append([self.x, self.y, shape.w, shape.h])
+                    new_pieces=count.check_shapes(pieces)
+                    pieces=new_pieces
                     shape.new_shape()
                     shape.start_position()
                     self.x=shape.start
                     self.y=0
                
             if event.type == pygame.QUIT:
+                print(pieces)
                 exit()
      
             draw_screen(self)              
-            clock.tick(30)      
+            clock.tick(gaimsettings.speed_of_the_shape(count.scores))      
 
 new_game=MainBody()
 new_game.main()
