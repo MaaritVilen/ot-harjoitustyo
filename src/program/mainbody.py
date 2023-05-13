@@ -1,16 +1,18 @@
+"""Program game loop, screen display and players actions are coded in this file."""
 import pygame
 from gaimsettings import GaimSettings
 from shapes import Shapes
 from counting import Counting
-#from sprites.box import Box
 
 class MainBody():
+    """This class includes game loop, sreen display and players actions."""
     def __init__(self):
         self.gamestatus=0
         self.new_shape=True
         self.event=""
-    
+
     def main(self):
+        """Game loop is, sreen display and reading players actions are in this function"""
         shape=Shapes()
         count=Counting()
         gaimsettings=GaimSettings()
@@ -20,26 +22,25 @@ class MainBody():
         self.y=0
         move_right=0
         move_left=0
-        turn=False
         string=""
         pieces=[]
         pygame.init()
         screen = pygame.display.set_mode((500, 700))
-        
         clock=pygame.time.Clock()
         fontti = pygame.font.SysFont("Arial", 24)
-        
+
         def draw_screen(self):
+            """This function draws screen in different game status"""
             gaimsettings=GaimSettings()
             screen.fill((0,0,0))
             if self.gamestatus==0:
-                teksti = fontti.render("Please insert your name and then hit enter.", True, (255, 255, 255))
+                teksti = fontti.render("Please insert your name and then hit enter.", True, (0, 200, 255))
                 screen.blit(teksti, (50, 50))
-                teksti_2 = fontti.render(string, True, (255, 0, 0))
+                teksti_2 = fontti.render(string, True, (0, 100, 255))
                 screen.blit(teksti_2, (100,100))
             if self.gamestatus==1:
-                text_3=fontti.render(f"Hello {string} your all time high scores are {gaimsettings.previous_results(string)}", True, (0,255,0))
-                text_4=fontti.render(f"Hit enter to start game", True, (0,255,0))
+                text_3=fontti.render(f"Hello {string} your all time high scores are {gaimsettings.previous_results(string)}", True, (0,200,200))
+                text_4=fontti.render(f"Hit enter to start game", True, (0,200,200))
                 screen.blit(text_3, (100,150))
                 screen.blit(text_4,(100,500))
             if self.gamestatus==2:
@@ -48,10 +49,8 @@ class MainBody():
                     pygame.draw.rect(screen, (0, 255, 200), (pieces[i][0], pieces[i][1], pieces[i][2], pieces[i][3]))
                 text_5=fontti.render(f"Socers: {count.scores}", True, (0,255,200))
                 screen.blit(text_5, (400,30))
-
             pygame.display.flip()
-        
-    
+
         while True:
 
             for event in pygame.event.get(): 
@@ -115,9 +114,9 @@ class MainBody():
                             shape.new_shape()
                     elif self.gamestatus==2:
                         if event.key==pygame.K_RIGHT:
-                            move_right=20
+                            move_right=10
                         elif event.key==pygame.K_LEFT:
-                            move_left=-20
+                            move_left=-10
                         elif event.key==pygame.K_UP:
                             count.turn_shape(shape.h, shape.w)
                             shape.h=count.new_height
@@ -137,7 +136,7 @@ class MainBody():
                             shape.start_position()
                             self.x=shape.start
                             self.y=0
-                            
+
                 if event.type==pygame.KEYUP:
                     if self.gamestatus==2:
                         if event.key==pygame.K_RIGHT:
@@ -150,10 +149,9 @@ class MainBody():
                             pass
                         elif event.key==pygame.K_RETURN:
                             pass
-            
-            
+ 
             self.x=count.count_x(self.x, shape.w, move_left, move_right)
-                       
+
             if self.gamestatus==2:
                 self.y=count.count_y(self.y, shape.h)
                 count.count_old_shapes(self.x, shape.w, shape.h, pieces)
@@ -166,7 +164,7 @@ class MainBody():
                     shape.start_position()
                     self.x=shape.start
                     self.y=0
-               
+
             if event.type == pygame.QUIT:
                 print(pieces)
                 exit()
