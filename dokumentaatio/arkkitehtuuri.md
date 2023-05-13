@@ -2,6 +2,8 @@
 
 ## Rakenne
 
+Ohjelman rakenne on kolmitasoinen pakkausrakenne.
+
 ```mermaid
 
 classDiagram
@@ -14,6 +16,11 @@ classDiagram
 	class Counting
 
 ```
+
+Mainbody sisältää pelisilmukan sekä lukee käyttäjän valitsemat toiminnot. Pakkaus Gaimsettings sisältää joitakin
+yksittäisiä pelin asetuksia sekä hakee ja tallentaa käyttäjän tiedot. Pakkaus Shapes luo pelissä liikkuvat palikat 
+sekä muokkaa palikoita uudelleen sitä mukaa kun rivejä poistetaan pelistä. Pakkaus Counting tekee palikoiden sijaintiin
+liittyvää laskentaa. 
 
 ## MainBody
 

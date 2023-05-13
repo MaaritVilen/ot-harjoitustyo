@@ -19,7 +19,7 @@ class GaimSettings():
         """Saves the result of the game"""
         new_name="yes"
         new_result="no"
-        with open("program/results.csv") as results:
+        with open("results.csv") as results:
             new_list=[]
             for line in results:
                 sub_list=[]
@@ -35,17 +35,17 @@ class GaimSettings():
                 new_list.append(sub_list)
 
         if new_name=="yes":
-            with open("program/results.csv","a") as updated_results:
+            with open("results.csv","a") as updated_results:
                 updated_results.write(f"{name};{result}\n")
         elif new_result=="yes":
-            with open("program/results.csv", "w") as updated_results:
+            with open("results.csv", "w") as updated_results:
                 for line in new_list:
                     updated_results.write(f"{line[0]};{line[1]}\n")
 
     def previous_results(self,name):
         """Gets previous result of the game from file"""
         result=0
-        with open("program/results.csv") as results:
+        with open("results.csv") as results:
             for line in results:
                 line=line.replace("\n","")
                 parts=line.split(";")

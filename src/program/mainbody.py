@@ -27,28 +27,36 @@ class MainBody():
         pygame.init()
         screen = pygame.display.set_mode((500, 700))
         clock=pygame.time.Clock()
-        fontti = pygame.font.SysFont("Arial", 24)
+        font = pygame.font.SysFont("Arial", 24)
 
         def draw_screen(self):
             """This function draws screen in different game status"""
             gaimsettings=GaimSettings()
             screen.fill((0,0,0))
             if self.gamestatus==0:
-                teksti = fontti.render("Please insert your name and then hit enter.", True, (0, 200, 255))
-                screen.blit(teksti, (50, 50))
-                teksti_2 = fontti.render(string, True, (0, 100, 255))
+                text = font.render("Please insert your name and then hit enter.", True, (0, 200, 255))
+                screen.blit(text, (50, 50))
+                teksti_2 = font.render(string, True, (0, 100, 255))
                 screen.blit(teksti_2, (100,100))
-            if self.gamestatus==1:
-                text_3=fontti.render(f"Hello {string} your all time high scores are {gaimsettings.previous_results(string)}", True, (0,200,200))
-                text_4=fontti.render(f"Hit enter to start game", True, (0,200,200))
+            elif self.gamestatus==1:
+                text_3=font.render(f"Hello {string} your all time high scores are {gaimsettings.previous_results(string)}", True, (0,200,200))
+                text_4=font.render(f"Hit enter to start game", True, (0,200,200))
                 screen.blit(text_3, (100,150))
                 screen.blit(text_4,(100,500))
-            if self.gamestatus==2:
+            elif self.gamestatus==2:
                 pygame.draw.rect(screen, (0, 255, 200), (self.x, self.y, shape.w, shape.h))
                 for i in range(len(pieces)):
                     pygame.draw.rect(screen, (0, 255, 200), (pieces[i][0], pieces[i][1], pieces[i][2], pieces[i][3]))
-                text_5=fontti.render(f"Socers: {count.scores}", True, (0,255,200))
+                text_5=font.render(f"Socers: {count.scores}", True, (0,255,200))
                 screen.blit(text_5, (400,30))
+            elif self.gamestatus==3:
+                text_5=font.render(f"Game over. Your total scores were {count.scores}", True, (0,255,200))
+                text_6=font.render(f"Do you want to play new game? Yes(y)/No(n)", True, (0,255,200))
+                screen.blit(text_5, (100,150))
+                screen.blit(text_6, (100,150))
+            elif self.gamestatus==4:
+                text_7=font.render("Thank you for playing with us!", True, (0,255,200))
+                screen.blit(text_7, (100,150))
             pygame.display.flip()
 
         while True:
@@ -127,6 +135,8 @@ class MainBody():
                             shape.w=count.new_width
                         elif event.key==pygame.K_RETURN:
                             count.count_old_shapes(self.x, shape.w, shape.h, pieces)
+                            if count.final_y<=0:
+                                self.gamestatus=3
                             self.y=count.final_y
                             self.x=count.final_x
                             pieces.append([self.x, self.y, shape.w, shape.h])
@@ -136,6 +146,11 @@ class MainBody():
                             shape.start_position()
                             self.x=shape.start
                             self.y=0
+                    elif self.gamestatus==3:
+                        if event.key==pygame.K_y:
+                            self.gamestatus==2
+                        elif event.key==pygame.K_n:
+                            self.gamestatus==4
 
                 if event.type==pygame.KEYUP:
                     if self.gamestatus==2:
@@ -155,6 +170,8 @@ class MainBody():
             if self.gamestatus==2:
                 self.y=count.count_y(self.y, shape.h)
                 count.count_old_shapes(self.x, shape.w, shape.h, pieces)
+                if count.final_y<=0:
+                    self.gamestatus=4
                 if self.y==count.final_y:
                     self.x=count.final_x
                     pieces.append([self.x, self.y, shape.w, shape.h])
