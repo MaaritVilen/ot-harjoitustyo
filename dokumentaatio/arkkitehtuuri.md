@@ -32,7 +32,7 @@ Käyttöliittymä sisältää kolme erilaista näkymää:
 ## Sovelluslogiikka
 
 Peli on toteutettu Pygame-kirjastoa käyttäen.
-[Pakkausrakenne ja luokat] https://github.com/MaaritVilen/ot-harjoitustyo/tree/master/dokumentaatio/kuvat
+[Pakkausrakenne ja luokat ](https://github.com/MaaritVilen/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Kaavio%20Pakkaus_Luokat.JPG)
 
 ## Tietojen pysyväistallennus ja Tiedostot
 
