@@ -67,7 +67,7 @@ check_shapes metodia, joka tarkistaa onko rivi täyttynyt. Mikäli rivi on täyt
 reshape_pieces metodia, joka pienentää olemassa olevia palikoita poistettavan rivin verran. Mikäli rivi on 
 täyttynyt check_shapes metodi kutsuu myös reposition pieces metodia, jonka tarkoitus olisi siirtää palikoita
 poistetun rivin verran alaspäin. Valitettavasti tätä toiminnallisuutta ei ole ehditty saattaa loppuun.
-
+![rivien poisto](./kuvat/check_shapes.JPG)
 
 ## MainBody
 
