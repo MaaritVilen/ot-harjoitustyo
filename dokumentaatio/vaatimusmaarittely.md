@@ -2,26 +2,34 @@
 
 ## Sovelluksen tarkoitus
 
-*Sovellus on klassinen tetris-peli, eli ruudulle putoavat palikat pyritään sjoittaamaan siten että ruutu ei täyty. 
+Sovellus on klassinen tetris-peli, eli ruudulle putoavat palikat pyritään sjoittaamaan siten että ruutu ei täyty. 
+Mikäli ruutu täyttyy palikoista, peli päättyy.
 
-*Mikäli ruutu täyttyy palikoista, peli päättyy.
+## Toiminnallisuudet:
 
-## Suunnittellut toiminnallisuudet:
+### Ennen peliä
+Pelaaja kirjaa alussa nimensä, jonka jälkeen hän näkee korkeimmat saavuttamansa pisteet aikaisemmissa peleissä. 
 
-*Pelaaja kirjaa alussa nimensä -TEHTY
+### Peli
+Pelaaja ohjaa ylhäältä putoavia palikoita ja pyrkii muodostamaan kokoanisia rivejä. Kun rivi on täynnä se poistuu 
+pelistä. Pelaaja saa 10 pistettä kustakin poistetusta palikasta. Peli nopeutuu pistemäärän kertyessä. Peli päättyy
+kun palikkapino yltää ruudun yläreunaan. 
 
-*Peli laskee pisteitä
+### Pelin päättyminen
+Pelin päätyttyä peli tallentaa saavutetut pisteet mikäli ne ylittävät aikai-
+semmat pisteet.
 
-*Pelistä löytyy saman pelaajan aikaisemmat pisteet. -TEHTY
 
-*Peli vaikeutuu (palikoita putaa tiheämmin) pisteiden kertyessä
+## Jatkokehitys
 
-*Peli päättyy kun palikkapino yltää ruudun yläkulmaan.
+### Selkeät puutteet
+Pelin kehitys jäi kurssin aikana kesken. Pelissä on ainakin seuraavat viat, joita ei ole ehditty korjata:
+- Liikutettaessa palikoita sivuttain (x-horisontissa) putoava palikka menee vanohjen palikoiden päälle.
+- Rivien poistuminen ruudulta ei ole täydellistä. (Laskennassa on edelleen jokin vika)
 
-## Näkymät
-
-*Aloitus-Nimi, jonka jälkeen näytetään aikaisemmat pisteet/tasot - osittain TEHTY
-
-*Peli näkymä - Osittain tehty
-
-*Loppunäkymä, jossa näytetään pisteet ja kysytään halukkuutta aloittaa uusi peli
+### Muita parannus ideoita
+Seuraavilla parannuksilla pelistä saa miellyttävämmän:
+- Koodi ei ole parasta mahdollista. Koodissa voisi hyödyntää dictionary ominaisutta sekä joissa tapauksissa muodostaa
+uusia luokkia ja funktioita
+- Palikoiden ohjailu on hieman vaikeaa. Tätä voisi parantaa
+- Pelin visuaalisuutta voisi parantaa
