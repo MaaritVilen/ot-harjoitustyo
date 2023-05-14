@@ -52,7 +52,7 @@ näppäintä peli kutsuu count_x metodia, joka tarkistaa että palikka pysyy pel
 hetkellä metodi joka tarkistaisi ettei putoava palikka siirry sivusuunnassa vanhojen palikoiden päälle.
 Lisäksi pelaaja voi kääntää palikkaa ylös/alas nuolinäppäimillä. Kun jompaa kumpaa näppäintä painetaan, peli kutsuu 
 turn_shape metodia.
-
+![palikat](./kuvat/Count_x.JPG)
 
 ### Palikoiden pysähtyminen ruudulla
 Palikat pysähtyvät ruudulla kun ne saavuttavat pelilaatikon pohjan tai ne osuvat pelissä olevaan vanhaan palikkaan. 
