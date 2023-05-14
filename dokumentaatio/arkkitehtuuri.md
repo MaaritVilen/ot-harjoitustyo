@@ -32,6 +32,7 @@ Käyttöliittymä sisältää kolme erilaista näkymää:
 ## Sovelluslogiikka
 
 Peli on toteutettu Pygame-kirjastoa käyttäen.
+[Pakkausrakenne ja luokat] https://github.com/MaaritVilen/ot-harjoitustyo/tree/master/dokumentaatio/kuvat
 
 ## Tietojen pysyväistallennus ja Tiedostot
 
