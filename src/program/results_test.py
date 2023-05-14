@@ -1,9 +1,11 @@
+"""Module tests functionin of saving result and retrieving old results"""
 import unittest
-from program.gaimsettings import GaimSettings
-from program.counting import Counting
+from gaimsettings import GaimSettings
+from counting import Counting
+#from shapes import Shapes
 
-#Testataan että hakee tuloksen oikein
 class TestGaimSettings(unittest.TestCase):
+    """Class tests """
     def setUp(self):
         print("no need")
 

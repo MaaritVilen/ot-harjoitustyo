@@ -53,7 +53,7 @@ class MainBody():
                 text_5=font.render(f"Game over. Your total scores were {count.scores}", True, (0,255,200))
                 text_6=font.render(f"Do you want to play new game? Yes(y)/No(n)", True, (0,255,200))
                 screen.blit(text_5, (100,150))
-                screen.blit(text_6, (100,150))
+                screen.blit(text_6, (100,200))
             elif self.gamestatus==4:
                 text_7=font.render("Thank you for playing with us!", True, (0,255,200))
                 screen.blit(text_7, (100,150))
@@ -137,6 +137,7 @@ class MainBody():
                             count.count_old_shapes(self.x, shape.w, shape.h, pieces)
                             if count.final_y<=0:
                                 self.gamestatus=3
+                                gaimsettings.save_result(string, count.scores)
                             self.y=count.final_y
                             self.x=count.final_x
                             pieces.append([self.x, self.y, shape.w, shape.h])
@@ -148,9 +149,9 @@ class MainBody():
                             self.y=0
                     elif self.gamestatus==3:
                         if event.key==pygame.K_y:
-                            self.gamestatus==2
+                            self.gamestatus=2
                         elif event.key==pygame.K_n:
-                            self.gamestatus==4
+                            self.gamestatus=4
 
                 if event.type==pygame.KEYUP:
                     if self.gamestatus==2:
@@ -171,7 +172,8 @@ class MainBody():
                 self.y=count.count_y(self.y, shape.h)
                 count.count_old_shapes(self.x, shape.w, shape.h, pieces)
                 if count.final_y<=0:
-                    self.gamestatus=4
+                    self.gamestatus=3
+                    gaimsettings.save_result(string, count.scores)
                 if self.y==count.final_y:
                     self.x=count.final_x
                     pieces.append([self.x, self.y, shape.w, shape.h])

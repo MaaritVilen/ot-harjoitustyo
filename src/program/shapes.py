@@ -9,8 +9,6 @@ class Shapes():
     def __init__(self):
         self.w=0
         self.h=0
-        self.color=0
-        self.start=0
 
     def new_shape(self):
         """The function chooses new shape randomly"""
@@ -34,10 +32,13 @@ class Shapes():
         """The function reshapes pieces once a row has been deleted."""
         for i in range(len(pieces)):
             if pieces[i][1]<=row_to_be_deleted<=pieces[i][1]+pieces[i][3]:
-                new_y=pieces[i][1]+20
-                new_h=pieces[i][3]-20
-                pieces[i][1]=new_y
-                pieces[i][3]=new_h
+                if pieces[i][3]>20:
+                    new_y=pieces[i][1]+40
+                    new_h=pieces[i][3]-20
+                    pieces[i][1]=new_y
+                    pieces[i][3]=new_h
+                else:
+                    pieces[i][3]=0
         pieces=Shapes.delete_row(pieces)
         return pieces
 

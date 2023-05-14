@@ -29,7 +29,7 @@ Käyttöliittymä sisältää kolme erilaista näkymää:
 - Pelinäkymä
 - Pelin lopetus näkymä 
 
-##Sovelluslogiikka
+## Sovelluslogiikka
 
 Peli on toteutettu Pygame-kirjastoa käyttäen.
 
