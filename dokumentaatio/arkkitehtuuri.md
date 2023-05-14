@@ -44,7 +44,7 @@ Kun pelaaja on käynnistänyt pelin enter-painikkeella. Peli kutsuu new_shape me
 yhden kolmesta vaihtoehtoisesta palikasta. Samalla peli myös kutsuu start_position metodia joka arpoo 
 satunnaisti palikan aloituspalikan satunnaisesta kohdasta. Samoja metodeja käytetään pelin aikana uusien 
 palikoiden luomiseen ja niiden sijainnin arpomiseen.
-(./kuvat/New%20shape.JPG)
+![uusi palikka](./kuvat/New%20shape.JPG)
 
 ### Palikoiden liikkeet ruudulla
 Pelaaja voi siirtää palikkaa oikealle ja vasemmalle nuolinäppäimillä. Kun pelaaja painaa jompaa kumpaa nuoli
