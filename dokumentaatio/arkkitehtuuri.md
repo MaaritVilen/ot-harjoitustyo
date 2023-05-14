@@ -69,20 +69,3 @@ täyttynyt check_shapes metodi kutsuu myös reposition pieces metodia, jonka tar
 poistetun rivin verran alaspäin. Valitettavasti tätä toiminnallisuutta ei ole ehditty saattaa loppuun.
 ![rivien poisto](./kuvat/check_shapes.JPG)
 
-## MainBody
-
-Pelisilmukka löytyy täältä. Silmukka lukee pelaajan syötteet ja valitsee toiminnan tämän perusteella
-
-## GaimSettings
-
-Täältä löytyy pelin pyörityksessä käytetyt asetukset kuten pelin nopeus. Täällä tapahtuu myös tietojen
-pysyväistallennus sillä tallennettava informaatio on varsin pieni, jolloin omaa luokkaa ei sitä varten kannata rakentaa.
-
-## Counting
-
-Peliin liittyy erilaista laskentaa kuten palikoiden sijainti ja liikkeet, rivien poistaminen, pisteiden kertyminen
-ja pelin päättyminen. Voi olla että kehityksen edetessä tätä osiota tulee vielä jakaa osiin.
-
-## Shapes
-
-Palikat arvotaan ja muodostetaan täällä.
