@@ -2,37 +2,24 @@
 
 ## Rakenne
 
-Ohjelman rakenne on kolmitasoinen pakkausrakenne.
+Ohjelman pakkausrakenne on yksikerrokseinen. Kaikki luokat on sisällytetty samaan program nimiseen pakkaukseen.
 
-```mermaid
-
-classDiagram
-	MainBody ..>GaimSettings
-	MainBody ..>Shapes
-	MainBody ..>Counting
-	class MainBody
-	class GaimSettings
-	class Shapes
-	class Counting
-
-```
-
-Mainbody sisältää pelisilmukan sekä lukee käyttäjän valitsemat toiminnot. Pakkaus Gaimsettings sisältää joitakin
-yksittäisiä pelin asetuksia sekä hakee ja tallentaa käyttäjän tiedot. Pakkaus Shapes luo pelissä liikkuvat palikat 
-sekä muokkaa palikoita uudelleen sitä mukaa kun rivejä poistetaan pelistä. Pakkaus Counting tekee palikoiden sijaintiin
-liittyvää laskentaa.
 
 ## Käyttöliittymä
 
 Käyttöliittymä sisältää kolme erilaista näkymää:
 - Pelin aloitusnäkymä
 - Pelinäkymä
-- Pelin lopetus näkymä 
+- Pelin lopetus näkymä
+
+Näitä ei ole toteutettu omina luokkinaan vaan pelisilmukka määrittelee pelistatuksen mukaan mitä näkymää käyttäjälle
+näytetään. 
 
 ## Sovelluslogiikka
 
-Peli on toteutettu Pygame-kirjastoa käyttäen.
+Peli on toteutettu Pygame-kirjastoa käyttäen. Eri luokkien suhdetta kuvaa seuraava luokka/pakkauskaavio.
 ![Pakkausrakenne ja luokat ](./kuvat/Kaavio%20Pakkaus_Luokat.JPG)
+
 
 ## Tietojen pysyväistallennus ja Tiedostot
 
