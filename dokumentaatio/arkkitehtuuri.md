@@ -42,20 +42,42 @@ Gaimsettings luokka tallentaa pelaajan nimen ja pisteet CSV tiedostoon.
 
 Seuraavassa kuvataan sovelluksen toimintalogiikkaa
 
+### MainBody luokka
+Pelisilmukka on sisällytetty kyseiseen luokkaan. Pelisilmukan sisään on rakennettu palikoiden liikkuminen y akselilla,
+näppäimistön syötteiden luku ja metodikutsut.
+
 ### Pelin aloittaminen
 
 Pelaaja syöttää oman nimensä. Mikäli pelaajan nimi löytyy tiedostosta, näyttää peli pelaajan saavuttamat korkeimmat
-pisteet.
+pisteet. Pelaaja käynnistää pelin enter painikkeella.
 
-### Pelaaminen
+### Uusien palikoiden luominen
 
-Palikoita putoaa ruudun yläreunasta vauhdilla, joka kiihtyy pisteiden kertyessä. Pelaaja voi siirtää palikkaa oikealle
-ja vasemmalle nuolinäppäimillä. Lisäksi pelaaja voi kääntää palikkaa nuolinäppäimillä. 
+Kun pelaaja on käynnistänyt pelin enter-painikkeella. Peli kutsuu new_shape metodia, joka arpoo satunnaiseti
+yhden kolmesta vaihtoehtoisesta palikasta. Samalla peli myös kutsuu start_position metodia joka arpoo 
+satunnaisti palikan aloituspalikan satunnaisesta kohdasta. Samoja metodeja käytetään pelin aikana uusien 
+palikoiden luomiseen ja niiden sijainnin arpomiseen.
 
-Pelin tarkoituksen on kerätä mahdollisimman paljon pisteitä. Pisteitä kertyy kun pelistä eliminoituu rivi. Tämä
-saavutetaan kun koko rivi on täytetty palikoilla. 
+### Palikoiden liikkeet ruudulla
+Pelaaja voi siirtää palikkaa oikealle ja vasemmalle nuolinäppäimillä. Kun pelaaja painaa jompaa kumpaa nuoli
+näppäintä peli kutsuu count_x metodia, joka tarkistaa että palikka pysyy peliruudun sisällä. Pelistä puuttuu tällä 
+hetkellä metodi joka tarkistaisi ettei putoava palikka siirry sivusuunnassa vanhojen palikoiden päälle.
+Lisäksi pelaaja voi kääntää palikkaa ylös/alas nuolinäppäimillä. Kun jompaa kumpaa näppäintä painetaan, peli kutsuu 
+turn_shape metodia.
 
-Peli päättyy kun palikat yltävät ruudun yläreunaan.
+### Palikoiden pysähtyminen ruudulla
+Palikat pysähtyvät ruudulla kun ne saavuttavat pelilaatikon pohjan tai ne osuvat pelissä olevaan vanhaan palikkaan. 
+Peli tarkistaa pohjan saavuttamista kutsumalla count_y metodia.
+Pelit tarkistaa mahdollisen törmäyksen vanhoihin palikoihin kutsumalla count_old shapes metodia. 
+
+### Rivien poistaminen ruudulta
+
+Aina kun vanha palikka pysähtyy, eli joko saavuttaa pohjan tai törmää vanhoihin palikoihin, ohjelma kutsuu 
+check_shapes metodia, joka tarkistaa onko rivi täyttynyt. Mikäli rivi on täyttynyt kyseinen metodi kutsuu
+reshape_pieces metodia, joka pienentää olemassa olevia palikoita poistettavan rivin verran. Mikäli rivi on 
+täyttynyt check_shapes metodi kutsuu myös reposition pieces metodia, jonka tarkoitus olisi siirtää palikoita
+poistetun rivin verran alaspäin. Valitettavasti tätä toiminnallisuutta ei ole ehditty saattaa loppuun.
+
 
 ## MainBody
 
